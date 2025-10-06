@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Exoplanet Research Challenge with AI - NASAproyect Team">
+		<title>Exoplanet Research — NASAproyect</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="css/custom.css">
+		<!-- Google Fonts (interfaz moderna) -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-dark text-light">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" aria-label="Main Navigation">
+				<div class="container">
+					<a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+						<img src="img/nasa.png" alt="NASA Logo" style="height:56px; width:auto; margin-right:14px;">
+						NASAproject
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir navegación">
+						<span class="true-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navMain">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contact">Detector</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Hero -->
+			<div class="position-relative w-100" style="overflow:hidden;">
+				<div class="row m-0 p-0 position-absolute top-0 start-0 w-100" style="z-index:0; pointer-events:none;">
+					<div class="col-12 d-flex justify-content-end p-0">
+						<img src="img/kepler.jpeg" alt="Kepler Telescope" class="img-fluid d-none d-md-block" style="width:64vw; max-width:1280px; height:480px; object-fit:cover; object-position:right;">
+						<img src="img/kepler.jpeg" alt="Kepler Telescope" class="img-fluid d-block d-md-none" style="width:80vw; max-width:100%; height:256px; object-fit:cover; object-position:right;">
+					</div>
+				</div>
+				<div class="position-absolute top-0 start-0 w-100 h-100" style="z-index:1; pointer-events:none;">
+					<div class="h-100 w-100" style="background: linear-gradient(90deg, #181c22 32%, rgba(24,28,34,0.01) 100%);"></div>
+				</div>
+				<section class="hero py-5" role="region" aria-label="Hero - Exoplanet Research" style="position:relative; z-index:2; background:transparent;">
+					<div class="container py-5">
+						<div class="row align-items-center">
+							<div class="col-lg-7 col-12 text-start">
+								<h1 class="display-5 fw-bold">Exoplanet Research with AI</h1>
+								<p class="lead mb-4">Explore visualizations, data, and AI tools to detect and characterize exoplanets.</p>
+								<div class="d-flex flex-wrap justify-content-start gap-3">
+									<a class="btn btn-lg btn-light mb-2" href="#features">See tools</a>
+									<a class="btn btn-lg btn-outline-light mb-2" href="#about">Meet the team</a>
+								</div>
+							</div>
+							<div class="col-lg-5 d-none d-lg-block" aria-hidden="true">
+								<!-- No image here, background image is handled by the row above -->
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- Features / Cards -->
+			<section id="features" class="py-5" style="background: linear-gradient(90deg, #232a34 0%, #2c3440 100%);">
+				<div class="container">
+					<div class="row align-items-center g-4">
+						<div class="col-lg-4 col-md-6 col-12 text-center mb-4 mb-lg-0">
+							<img src="img/nasa.png" alt="Project Logo" class="img-fluid mb-3" style="max-width:260px;">
+							<p class="small text-muted">New Horizon • Exoplanet detection and analysis platform</p>
+						</div>
+						<div class="col-lg-8 col-md-6 col-12">
+							<h2 class="h3 mb-3">Software Features</h2>
+							<p class="text-muted mb-4">Our platform integrates a complete pipeline from data ingestion to visualization and result export. Below are the main functionalities.</p>
+							<div class="row row-cols-1 row-cols-md-2 g-3">
+								<!-- Feature list -->
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">🔍</div>
+										<div>
+											<h3 class="h6 mb-1">Preprocessing pipeline</h3>
+											<p class="small text-muted mb-0">Normalization, detrending, and calibration to obtain ready light curves.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">✨</div>
+										<div>
+											<h3 class="h6 mb-1">Transit detection</h3>
+											<p class="small text-muted mb-0">Automatic detection of transit events and periodicity evaluation.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">🤖</div>
+										<div>
+											<h3 class="h6 mb-1">Classification models</h3>
+											<p class="small text-muted mb-0">Networks and ensembles to prioritize real candidates.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">📈</div>
+										<div>
+											<h3 class="h6 mb-1">Interactive visualization</h3>
+											<p class="small text-muted mb-0">Charts and dashboards with model overlays.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">🔗</div>
+										<div>
+											<h3 class="h6 mb-1">Export and APIs</h3>
+											<p class="small text-muted mb-0">Download results and query data via API.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3 align-items-start">
+										<div class="icon-box" aria-hidden="true">🧾</div>
+										<div>
+											<h3 class="h6 mb-1">Monitoring and traceability</h3>
+											<p class="small text-muted mb-0">Logs, versioning, and scientific reproducibility.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sobre el equipo -->
+			<section id="about" class="py-5">
+			<div class="container">
+			<h2 class="h3 mb-4 text-center">About the team</h2>
+					<div class="row g-4">
+						<!-- Tarjetas de equipo -->
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/linguini.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Linguini</h3>
+								<p class="text-muted small">AI developer</p>
+							</article>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/keke.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Keke</h3>
+								<p class="text-muted small">AI developer</p>
+							</article>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/kiki.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Kiki</h3>
+								<p class="text-muted small">Web developer</p>
+							</article>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/cami.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Camioneta</h3>
+								<p class="text-muted small">UI/UX</p>
+							</article>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/tuta.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Tutankamon</h3>
+								<p class="text-muted small">Co-worker</p>
+							</article>  
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<article class="card team-card text-center p-3 h-100">
+								<img src="img/rubio.png" alt="Foto de miembro" class="rounded-circle mx-auto d-block mb-3 team-photo">
+								<h3 class="h6 mb-1">Mein Bruder</h3>
+								<p class="text-muted small">Web design</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Detector de Exoplanetas -->
+			<section id="contact" class="py-5 contact-section" aria-labelledby="detector-title">
+			<div class="container">
+			<h2 id="detector-title" class="h3 mb-4 text-center">🪐 Exoplanet Detector</h2>
+					<div class="row justify-content-center">
+						<div class="col-md-10 col-lg-8">
+							<div class="card bg-secondary p-4 shadow-lg">
+								<form id="exoplanetForm" class="row g-3">
+								<!-- 9 original parameters -->
+								<div class="col-md-6">
+								<label>Orbital period (days)</label>
+								<input type="number" step="any" name="orbper" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Transit duration (hours)</label>
+								<input type="number" step="any" name="trandur" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Transit depth (ppm)</label>
+								<input type="number" step="any" name="trandep" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Planetary radius (R⊕)</label>
+								<input type="number" step="any" name="rade" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Insolation (S⊕)</label>
+								<input type="number" step="any" name="insol" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Equilibrium temperature (K)</label>
+								<input type="number" step="any" name="eqt" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Stellar temperature (K)</label>
+								<input type="number" step="any" name="teff" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Stellar radius (R☉)</label>
+								<input type="number" step="any" name="rad" class="form-control" required>
+								</div>
+								<div class="col-md-6">
+								<label>Surface gravity log(g)</label>
+								<input type="number" step="any" name="logg" class="form-control" required>
+								</div>
+
+								<div class="col-12 text-center mt-3">
+								<button type="submit" class="btn btn-primary px-5">Predict</button>
+								</div>
+								</form>
+								<div id="resultado" class="mt-4 text-center fs-4 fw-bold"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script>
+				document.getElementById("exoplanetForm").addEventListener("submit", async (e) => {
+					e.preventDefault();
+					const formData = new FormData(e.target);
+					const data = Object.fromEntries(formData.entries());
+					Object.keys(data).forEach(k => data[k] = parseFloat(data[k]));
+
+					// Calculate the 5 derived features
+					data.depth_per_duration = data.trandep / data.trandur;
+					data.insol_per_radius2 = data.insol / (data.rade ** 2);
+					data.radius_teff_ratio = data.rade / data.teff;
+					data.insol_orbper_ratio = data.insol / data.orbper;
+					data.logg_teff_product = data.logg * data.teff;
+
+					try {
+						const res = await fetch("http://127.0.0.1:5000/predict", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify(data)
+						});
+						const result = await res.json();
+						const resultDiv = document.getElementById("resultado");
+
+						if (result.error) {
+							resultDiv.innerHTML = `<span class="text-danger">Error: ${result.error}</span>`;
+						} else {
+							const color = result.prediction === "Exoplanet" ? "text-success" : "text-warning";
+							resultDiv.innerHTML = `
+								<span class="${color}">${result.prediction}</span><br>
+								<small>Probability: ${(result.probability * 100).toFixed(2)}%</small>
+							`;
+						}
+					} catch (err) {
+						document.getElementById("resultado").innerHTML = `<span class="text-danger">Error: ${err.message}</span>`;
+					}
+				});
+				</script>
+			</section>
+		</main>
+
+		<footer class="py-4 bg-black bg-opacity-50 text-muted">
+		<div class="container d-flex justify-content-between align-items-center">
+		<small>© 2025 New Horizon • All rights reserved</small>
+		<div>
+		<a class="text-decoration-none text-muted me-3" href="#">Terms</a>
+		<a class="text-decoration-none text-muted" href="#">Privacy</a>
+		</div>
+		</div>
+		</footer>
+
+		<script>
+		function adjustBodyPaddingForNavbar() {
+			const nav = document.querySelector('.navbar.fixed-top');
+			if (!nav) return;
+			const navHeight = nav.getBoundingClientRect().height;
+			document.body.style.paddingTop = navHeight + 'px';
+		}
+		window.addEventListener('load', adjustBodyPaddingForNavbar);
+		window.addEventListener('resize', adjustBodyPaddingForNavbar);
+		const nav = document.querySelector('.navbar.fixed-top');
+		if (nav && 'ResizeObserver' in window) {
+			const ro = new ResizeObserver(adjustBodyPaddingForNavbar);
+			ro.observe(nav);
+		}
+		</script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,177 @@
+/* Custom styles para NASAproyect - estética y UX
+   Paleta: azul profundo, acentos celestes y fondo oscuro para contraste
+*/
+/* Tipografía Nasalization: asegúrate de colocar los archivos reales dentro de /fonts
+   Recomendado (en orden de mayor a menor eficiencia):
+     Nasalization-Regular.woff2
+     Nasalization-Regular.woff
+     Nasalization-Regular.otf   (el que acabas de extraer: "Nasalization Rg.otf" RENÓMBRALO así)
+     Nasalization-Regular.ttf   (si dispones de la versión TTF real)
+*/
+@font-face {
+  font-family: 'Nasalization';
+  src: local('Nasalization'), local('Nasalization Regular'),
+       url('../fonts/Nasalization-Regular.woff2') format('woff2'),
+       url('../fonts/Nasalization-Regular.woff') format('woff'),
+       url('../fonts/Nasalization-Regular.otf') format('opentype'),
+       url('../fonts/Nasalization-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* muestra texto con fallback mientras carga */
+}
+
+/* NASA-inspired palette: deep navy, white, vivid red/blue accents */
+:root{
+  --nasa-blue:#0b3d91; /* NASA blue */
+  --deep-navy:#020617; /* near-black navy */
+  --panel:#06102a;
+  --accent:#ff2d55; /* vivid red accent */
+  --accent-2:#66ccff; /* light blue accent */
+  --muted:#9aa6b2;
+  --glass: rgba(255,255,255,0.03);
+}
+
+html,body{
+  height:100%;
+  font-family: 'Nasalization', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(180deg,var(--deep-navy) 0%, #041128 60%);
+  color: #ffffff;
+  font-weight: 400;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+
+/* Encabezados: mismo tipo, solo ajustar pesos si se requiere */
+h1,h2,h3,h4,h5,h6{ font-weight:600; margin-top:0; }
+
+/* Ajustes de tamaño por jerarquía (puedes modificar si quieres otros tamaños) */
+h1{ font-size:2.25rem; }
+h2{ font-size:1.5rem; }
+h3{ font-size:1.125rem; }
+
+/* Secciones: fondo por franjas
+   - .hero (inicio) y #about (equipo) usan el mismo color --deep-navy
+   - #features usa el azul oscuro inferior (mismo que aparece en el fondo actual: #041128)
+*/
+.hero, #about{
+  background: var(--deep-navy);
+}
+
+/* Contact separado con mismo fondo de features */
+#contact{
+  background: #041128;
+}
+
+#features{
+  background: #041128; /* azul oscuro del degradado inferior */
+}
+
+.navbar{ background: linear-gradient(90deg, rgba(11,61,145,0.95), rgba(6,16,42,0.9)); }
+.navbar-brand{ letter-spacing: 0.6px; font-family: 'Nasalization', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+.hero{
+  background-color: var(--deep-navy);
+  background-image: url('../img/space-hero.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 60%;
+  min-height: 380px;
+}
+
+.hero .container{ max-width: 900px; }
+
+.feature-card{
+  background: transparent; /* unified: no panel background */
+  border: none;
+  color: #ffffff;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.feature-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.55); }
+
+.card-title{ color: var(--accent-2); font-weight:600; }
+
+.btn-light{ background: #ffffff; color: var(--nasa-blue) !important; font-weight:700; border-radius: 8px; padding-left: 1.25rem; padding-right: 1.25rem; }
+.btn-outline-light{ border-color: rgba(255,255,255,0.12); color: #ffffff; border-radius:8px; }
+
+/* Footer */
+footer a{ color: rgba(255,255,255,0.6); }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero{ background-size: 120%; background-position: center top; }
+  .hero .container{ padding-top: 2rem; padding-bottom: 2rem; }
+}
+
+/* Focus visible for accessibility */
+:focus-visible{ outline: 3px solid rgba(102,204,255,0.16); outline-offset: 2px; }
+
+/* Utility spacing */
+.gap-3{ gap: 1rem; }
+
+/* Small logo mark (inline) */
+.brand-mark{
+  display:inline-block; width:34px; height:34px; background: radial-gradient(circle at 30% 30%, var(--accent-2), rgba(255,255,255,0.05)); border-radius:50%; margin-right:8px; vertical-align:middle;
+}
+
+/* Team cards */
+.team-card{ background: transparent; border: none; box-shadow: none; padding-top: 1rem; padding-bottom: 1rem; }
+.team-photo{ width:96px; height:96px; object-fit:cover; border-radius:50%; border: 3px solid rgba(255,255,255,0.06); }
+
+/* Ensure text contrast remains good against dark background */
+team-card h3{ color: #ffffff; margin-bottom:0.25rem; }
+team-card p{ color: #ffffff; margin-bottom:0; }
+
+/* Force team names to be white and bold */
+.team-card h3{ font-weight: 700 !important; color: #ffffff !important; }
+
+/* Override Bootstrap utility muted/small so text becomes white and bold */
+.text-muted, .small, p, .lead, .card-text, footer small{ color: #ffffff !important; font-weight:400 !important; }
+
+/* Sections spacing unified */
+section{ padding-top:3.5rem; padding-bottom:3.5rem; }
+section h2, section h3{ color: #ffffff; }
+
+/* Footer unified */
+footer{ border-top: 1px solid rgba(255,255,255,0.03); background: transparent; }
+
+/* Global: make any Bootstrap card or custom card fully transparent */
+.card, .card-body, .feature-card, .team-card{
+  background: transparent !important;   
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Keep the lift on hover but without visible shadow/border */
+.feature-card:hover, .team-card:hover{
+  transform: translateY(-6px);
+}
+
+/* Features two-column layout styles */
+.icon-box{ width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.03); border-radius:10px; font-size:20px; }
+.col-lg-4 img{ max-width:220px; border-radius:12px; }
+.col-lg-4 p{ color: rgba(255,255,255,0.8); }
+
+/* Aplicar Nasalization globalmente (sin !important masivo) */
+/* Fuente global aplicada a TODO el texto */
+:root { --app-font: 'Nasalization', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+body, p, a, li, button, input, textarea, span, small, strong, em, h1,h2,h3,h4,h5,h6, .navbar-brand, .btn, .card, .card * {
+  font-family: var(--app-font);
+}
+/* Contact section styles */
+#contact { scroll-margin-top: 6rem; }
+#contact .contact-form { background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); backdrop-filter: blur(4px); padding:2rem 1.75rem; border-radius:14px; }
+#contact .form-label { font-size:.85rem; letter-spacing:.5px; text-transform:uppercase; opacity:.9; }
+#contact .form-control { background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); color:#fff; }
+#contact .form-control:focus { border-color: var(--accent-2); box-shadow:0 0 0 2px rgba(102,204,255,0.25); }
+#contact textarea { resize:vertical; }
+#contact button[type=submit] { font-weight:600; }
+#contact .invalid-feedback { font-size:.7rem; }
+
+@media (max-width: 576px){
+  #contact .contact-form { padding:1.35rem 1.1rem; }
+}
+/* Universal fallback para cualquier otro nodo */
+* { font-family: var(--app-font); }
+/* Pseudo-elementos y placeholders */
+*::before,*::after{ font-family: var(--app-font); }
+::placeholder{ font-family: var(--app-font); }
+
