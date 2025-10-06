@@ -18,11 +18,12 @@ document.getElementById("exoplanetForm").addEventListener("submit", async (e) =>
     const resultDiv = document.getElementById("resultado");
 
     try {
-        const res = await fetch("http://127.0.0.1:5000/predict", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        });
+        const res = await fetch("https://mi-backend.onrender.com/predict", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+});
+
 
         const result = await res.json();
 
@@ -39,3 +40,4 @@ document.getElementById("exoplanetForm").addEventListener("submit", async (e) =>
         resultDiv.innerHTML = `<span class="text-danger">Error: ${err.message}</span>`;
     }
 });
+
