@@ -39,18 +39,18 @@ backend/
 		routers/
 			health.py          # /health
 			models.py          # /models/metrics (mock)
-	requirements.txt       # Dependencias backend
+requirements.txt       # Dependencias backend (en la raíz del repositorio)
 ```
 
 ### Levantar backend localmente
 
 En PowerShell (Windows):
 ```
-cd backend
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+cd NASAproyect/backend
+uvicorn app:app --reload --port 8000
 ```
 
 Abrir: http://127.0.0.1:8000/docs para ver la documentación interactiva.
