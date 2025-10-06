@@ -18,7 +18,7 @@ document.getElementById("exoplanetForm").addEventListener("submit", async (e) =>
     const resultDiv = document.getElementById("resultado");
 
     try {
-        const res = await fetch("https://mi-backend.onrender.com/predict", {
+        const res = await fetch("https://backend-nasa-m3yr.onrender.com/predict", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
